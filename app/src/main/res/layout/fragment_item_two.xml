@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="in.becandid.app.becandid.ui.group.GroupsFragment">
+
+    <TextView
+        android:layout_width="250dp"
+        android:id="@+id/search_groups_get_all"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:hint="Search"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_rectangle"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/create_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg_create"
+        android:paddingBottom="5dp"
+        android:layout_margin="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="+  Create"
+        android:textColor="@color/white" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/activity_groups_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/md_grey_50"
+        app:tabGravity="fill"
+        android:layout_below="@+id/search_groups_get_all"
+        app:tabIndicatorColor="@color/new_toolbar_color"
+        app:tabMode="fixed"
+        app:tabIndicatorHeight="3dp"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingEnd="0dp"
+        app:tabSelectedTextColor="@color/new_toolbar_color"
+        app:tabTextColor="@color/black" />
+
+
+
+
+   <!-- <com.ogaclejapan.smarttablayout.SmartTabLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_groups_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingBottom="4dp"
+        app:stl_defaultTabTextColor="@color/black"
+        app:stl_distributeEvenly="true"
+        app:stl_indicatorColor="@color/new_toolbar_color"
+        app:stl_indicatorCornerRadius="1.5dp"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="3dp"
+        app:stl_underlineColor="@color/transparent"
+        /> -->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/activity_groups_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_groups_tab_layout"
+        android:layout_margin="5dp"/>
+
+</RelativeLayout>

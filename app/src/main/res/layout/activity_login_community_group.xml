@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    tools:context=".ui.group.LoginCommunityGroupActivity">
+
+    <Button
+        android:id="@+id/buttonSwipeLeft_login"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/btn_bg_light_orange"
+        android:backgroundTint="@android:color/black"
+        android:text="SKIP"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/buttonSwipeRight_login"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_bg_light_orange"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="JOIN"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/login_swipe_button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_bg_light_orange"
+        android:backgroundTint="@color/md_grey_400"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <include layout="@layout/error_layout" />
+
+    <ProgressBar
+        android:id="@+id/main_progress_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/community_Fragment_frame_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="70dp"
+            android:text="Loading"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:text="Please Wait..."
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+
+    <link.fls.swipestack.SwipeStack
+        android:id="@+id/swipeStack_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonSwipeLeft_login"
+        android:padding="36dp"
+        android:splitMotionEvents="false"
+        app:stack_rotation="5"
+        app:stack_size="3" />
+
+</RelativeLayout>

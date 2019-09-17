@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textstatusback"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@android:color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parent_row_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="8dp"
+        card_view:cardCornerRadius="16dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/list_item_post_background_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/list_item_posts_avatar_text"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_margin="4dp"
+                    android:alpha="0.7"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/list_item_post_userNickName_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@id/list_item_posts_avatar_text"
+                    android:layout_toRightOf="@id/list_item_posts_avatar_text"
+                    android:singleLine="true"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="harishusername"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/list_item_posts_avatar_text"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/drop_down_menu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toEndOf="@id/list_item_post_userNickName_text"
+                    android:singleLine="true"
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                    app:layout_constraintLeft_toRightOf="@+id/list_item_post_userNickName_text"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/list_item_posts_timeStamp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/list_item_post_userNickName_text"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@id/list_item_posts_avatar_text"
+                    android:layout_toRightOf="@id/list_item_posts_avatar_text"
+                    android:singleLine="true"
+                    android:text="time"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/list_item_posts_avatar_text"
+                    app:layout_constraintTop_toBottomOf="@+id/list_item_post_userNickName_text" />
+
+                <TextView
+                    android:id="@+id/list_item_posts_category_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_category"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxWidth="120dp"
+                    android:maxLines="1"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:padding="6dp"
+                    android:textColor="#444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/list_item_posts_message_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:maxLines="4"
+                    android:minHeight="94dp"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/list_item_posts_avatar_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/all_post_like_buttons_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_item_post_background_text"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/list_item_like_button_text"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/new_counter_like_number_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/list_item_like_button_text"
+                    app:layout_constraintLeft_toRightOf="@+id/list_item_like_button_text"
+                    app:layout_constraintTop_toTopOf="@+id/list_item_like_button_text" />
+
+                <ImageView
+                    android:id="@+id/list_item_hug_button_text"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_heart_broken"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/new_counter_like_number_text"
+                    app:layout_constraintStart_toEndOf="@+id/new_counter_like_number_text" />
+
+                <TextView
+                    android:id="@+id/new_counter_hug_number_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/list_item_hug_button_text"
+                    app:layout_constraintLeft_toRightOf="@+id/list_item_hug_button_text"
+                    app:layout_constraintTop_toTopOf="@+id/list_item_hug_button_text" />
+
+                <ImageView
+                    android:id="@+id/emoji_above_comment_text"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_comment"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/new_counter_hug_number_text" />
+
+                <TextView
+                    android:id="@+id/new_counter_cmt_number_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/emoji_above_comment_text"
+                    app:layout_constraintLeft_toRightOf="@+id/emoji_above_comment_text"
+                    app:layout_constraintTop_toTopOf="@+id/emoji_above_comment_text" />
+
+                <com.github.angads25.toggle.LabeledSwitch
+                    android:id="@+id/switchbutton_text"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:colorBorder="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="@+id/emoji_above_comment_text"
+                    app:layout_constraintLeft_toRightOf="@+id/new_counter_cmt_number_text"
+                    app:layout_constraintTop_toTopOf="@+id/emoji_above_comment_text"
+                    app:on="true"
+                    app:textOff="FILTER OFF"
+                    app:textOn="FILTER ON" />
+
+                <TextView
+                    android:id="@+id/textshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:text="Share"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/emoji_above_comment_text"
+                    app:layout_constraintLeft_toRightOf="@+id/switchbutton_text"
+                    app:layout_constraintTop_toTopOf="@+id/emoji_above_comment_text" />
+
+                <!--      <TextView
+                          android:layout_width="110dp"
+                          android:layout_height="wrap_content"
+                          android:text="Locality"
+                          android:layout_marginLeft="50dp"
+                          android:layout_marginBottom="5dp"
+                          app:layout_constraintLeft_toRightOf="@+id/new_counter_cmt_number"
+                          app:layout_constraintTop_toTopOf="parent"
+                          android:textSize="14sp"
+                          android:textColor="@color/white"
+                          android:id="@+id/distance_locality"
+                          />
+
+                      <TextView
+                          android:layout_width="110dp"
+                          android:layout_height="wrap_content"
+                          android:text="country"
+                          android:layout_marginLeft="50dp"
+                          android:layout_marginBottom="5dp"
+                          app:layout_constraintLeft_toRightOf="@+id/new_counter_cmt_number"
+                          app:layout_constraintTop_toBottomOf="@+id/distance_locality"
+                          android:textColor="@color/white"
+                          app:layout_goneMarginBottom="5dp"
+                          android:textSize="14sp"
+                          android:id="@+id/distance_country"
+                          /> -->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                  android:id="@+id/llCommentViews_text"
+                  android:layout_below="@+id/all_post_like_buttons_text"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                  android:orientation="vertical">
+
+              <TextView
+                  android:id="@+id/tvAllComments_text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:paddingRight="5dp"
+                  android:singleLine="true"
+                  android:text="Read all 12 comments"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  app:layout_constraintLeft_toRightOf="@+id/list_item_posts_avatar_text"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:orientation="horizontal">
+
+                  <ImageView
+                      android:id="@+id/image_last_comment_text"
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:layout_marginStart="5dp"
+                      android:layout_marginRight="5dp"
+                      android:scaleType="fitXY"
+                      tools:layout_editor_absoluteY="5dp" />
+
+                  <TextView
+                      android:id="@+id/tvLastComment_text"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center|left"
+                      android:maxLines="1"
+                      android:paddingLeft="5dp"
+                      android:singleLine="true"
+                      android:text="We can not guarantee that the information on this page is 100% correct."
+                      android:textColor="@color/white"
+                      app:layout_constraintLeft_toRightOf="@+id/list_item_posts_avatar_text"
+                      app:layout_constraintTop_toTopOf="parent" />
+
+                  <TextView
+                      android:id="@+id/tvTimeOfComment_text"
+                      android:layout_width="20dp"
+                      android:visibility="gone"
+                      android:layout_height="match_parent"
+                      android:layout_marginRight="10dp"
+                      android:gravity="center|right"
+                      android:singleLine="true"
+                      android:textColor="@color/white"
+                      android:textSize="14sp"
+                      app:layout_constraintLeft_toRightOf="@+id/list_item_posts_avatar_text"
+                      app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
+              </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="parent"
+                android:layout_below="@+id/llCommentViews_text"
+                app:layout_constraintTop_toBottomOf="@+id/llCommentViews_text"
+                android:id="@+id/candid_back_text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/candid_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="4dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_launcher" />
+
+
+                <TextView
+                    android:id="@+id/candid_name"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/candid_icon"
+                    app:layout_constraintTop_toTopOf="@+id/candid_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/candid_icon"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:text="Candid"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/google_play_store_icon"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="4dp"
+                    app:layout_constraintLeft_toRightOf="@+id/candid_name"
+                    app:layout_constraintBottom_toBottomOf="@+id/candid_name"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/google_play_badge" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- <ImageView
+                 android:id="@+id/status_more_text"
+                 android:layout_width="45dp"
+                 android:layout_height="45dp"
+                 android:visibility="gone"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginTop="10dp"
+                 android:padding="10dp"
+                 android:src="@drawable/ic_more_grey" /> -->
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
